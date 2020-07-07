@@ -1,0 +1,90 @@
+.task2 {
+  box-sizing: border-box;
+
+  h2, p {
+    box-sizing: border-box;
+    display: block;
+  }
+
+  .ball-wrap {
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+    display: block;
+    background-image: url("./mball.png");
+    background-size: cover;
+    background-position: -5px -5px;
+    position: relative;
+
+    .three-angle {
+      border: 2px #5882DA solid;
+      cursor: pointer;
+      border-radius: 50%;
+      box-shadow: #282c34 1px 1px 8px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 250px;
+      height: 250px;
+      transform-origin: center;
+      background-color: rgba(33, 58, 66, 0.73);
+
+      @keyframes spin {
+        0% {
+          transform: translate(-50%, -50%) rotateX(0deg);
+        }
+        100% {
+          transform: translate(-50%, -50%) rotateX(1440deg);
+        }
+      }
+
+      &.anim {
+        animation-name: spin;
+        animation-duration: 4s;
+        animation-delay: .5s;
+        animation-timing-function: cubic-bezier(0, .75, .8, 1);
+        animation-fill-mode: forwards;
+      }
+
+
+      .three-angle__text {
+        width: 150px;
+        height: 80px;
+        line-height: 80px;
+        background-color: rgba(0, 0, 0, 0.51);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #868bd2;
+        font-size: 1.1rem;
+        font-weight: 700;
+        text-shadow: #15338d 1px 1px 5px;
+        box-shadow: #5882DA 1px 1px 100px;
+        border: 1px solid transparent;
+        border-radius: 50px 50px;
+
+        @keyframes just-opacity {
+          from {
+            opacity: 0;
+          }
+          to {
+            opacity: 1;
+            border: 2px solid red;
+            box-shadow: #5882DA 1px 1px 100px;
+
+          }
+        }
+
+        &.anim {
+          animation-name: just-opacity;
+          animation-duration: 4s;
+          animation-delay: .5s;
+          animation-timing-function: cubic-bezier(.98, .02, .99, .37);
+          animation-fill-mode: forwards;
+        }
+      }
+    }
+  }
+}

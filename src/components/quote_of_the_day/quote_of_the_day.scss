@@ -1,0 +1,49 @@
+.task1 {
+ height: 400px;
+
+  blockquote {
+    overflow: hidden;
+    width: 100%;
+    transition: all .2s ease-in-out;
+    margin: 0;
+    padding: 15px;
+    box-sizing: border-box;
+    max-height: 50vh;
+
+
+    &.hide {
+      width: 0;
+      height: 0;
+    }
+
+    p {
+      font-size: 1rem;
+      font-style: italic;
+    }
+
+    pre {
+      text-align: center;
+      line-height: 1.5;
+      padding: 10px;
+      width: 70%;
+      display: block;
+      margin: 0 auto;
+      white-space: pre-wrap;
+    }
+  }
+
+  .button-wrap {
+    padding: 15px;
+
+    button {
+      background-color: #535353;
+      padding: 5px;
+      font-weight: 700;
+      color: #61DAFB;
+
+      &:first-of-type {
+        margin-right: 5px;
+      }
+    }
+  }
+}
