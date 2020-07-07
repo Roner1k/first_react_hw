@@ -3,6 +3,8 @@ import React, {Component} from 'react';
 import './App.scss';
 import QuoteOfTheDay from "../quote_of_the_day";
 import MagicBall from "../magic_ball";
+import GiveRandomNumber from "../random_number";
+
 export default class App extends Component {
 
     constructor(props) {
@@ -39,9 +41,8 @@ export default class App extends Component {
 
     randomQuote() {
         const max = this.state.quotes.length;
-        const rn = Math.floor(Math.random() * (max - 0)) + 0;
-      console.log(rn)
-        this.setState({randomNumber: rn, visible: true})
+        const randomValue = Math.floor(Math.random() * (max - 0)) + 0;
+        this.setState({randomNumber: randomValue, visible: true})
     }
 
     visibleChange() {
@@ -60,6 +61,7 @@ export default class App extends Component {
                     visible = {this.state.visible}
                 />
                 <MagicBall/>
+                <GiveRandomNumber/>
             </div>
 
         );
