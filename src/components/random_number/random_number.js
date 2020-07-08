@@ -22,7 +22,7 @@ export default class GiveRandomNumber extends Component {
         const max = +this.state.max;
         if (min >= max) return alert('Min value >= Max value!')
         const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
-        console.log(`m=${min} x=${max} r=${randomNumber}`)
+        //console.log(`m=${min} x=${max} r=${randomNumber}`)
         this.setState({randomValue: randomNumber})
     }
 

@@ -46,7 +46,6 @@ export default class MagicBall extends Component {
     giveAnswer() {
         const max = this.state.answers.length;
         const randomValue = Math.ceil(Math.random() * (max - (1)));
-        console.log(randomValue)
         this.setState({randomAnswer: randomValue, stopAnimation: true})
     }
 
