@@ -3,6 +3,7 @@ import './magic_ball.scss'
 import styled from "styled-components";
 
 
+
 export default class MagicBall extends Component {
     constructor(props) {
         super(props);
@@ -44,7 +45,8 @@ export default class MagicBall extends Component {
 
     giveAnswer() {
         const max = this.state.answers.length;
-        const randomValue = Math.floor(Math.random() * (max - 1)) + 1;
+        const randomValue = Math.ceil(Math.random() * (max - (1)));
+        console.log(randomValue)
         this.setState({randomAnswer: randomValue, stopAnimation: true})
     }
 
@@ -53,7 +55,7 @@ export default class MagicBall extends Component {
         const {a, color} = this.state.answers[this.state.randomAnswer]
 
         const AnswerText = styled.div`
-border:2px solid ${color} !important;
+border: 2px solid ${color} !important;
 box-shadow: ${color} 1px 1px 100px !important;
 `
         return (

@@ -2,10 +2,43 @@
   box-sizing: border-box;
   padding: 15px;
   margin: 15px;
-  h2{
+  position: relative;
+
+  h2 {
     margin: 0;
     padding: 0;
   }
 
+  .set-numbers {
+    text-align: right;
+    width: 195px;
+    margin: 0 auto;
+    transform: translateX(-32px);
 
+    label {
+      padding: 5px;
+      font-size: 1.3rem;
+    }
+
+
+  }
+  input {
+    margin-bottom: 10px;
+    width: 120px;
+
+  }
+  span {
+    background-color: white;
+    color: #282c34;
+    width: 70px;
+    height: 50px;
+    line-height: 47px;
+    display: block;
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.1rem;
+    font-weight: 700;
+  }
 }

@@ -1,0 +1,22 @@
+.task4 {
+  .sv-wrap {
+    width: 250px;
+    height: 444px;
+    margin: 20px auto;
+    border: #000000 1px solid;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+
+    .red, .yellow, .green {
+      border: white 1px solid;
+      width: 50%;
+      max-height: 113px;
+      max-width: 113px;
+      height: 25%;
+      border-radius: 100%;
+
+    }
+  }
+}

@@ -4,6 +4,7 @@ import './App.scss';
 import QuoteOfTheDay from "../quote_of_the_day";
 import MagicBall from "../magic_ball";
 import GiveRandomNumber from "../random_number";
+import ColorChanger from "../color_changer";
 
 export default class App extends Component {
 
@@ -62,6 +63,7 @@ export default class App extends Component {
                 />
                 <MagicBall/>
                 <GiveRandomNumber/>
+                <ColorChanger/>
             </div>
 
         );
